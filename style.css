@@ -50,7 +50,7 @@ ul {
   width: 180px;
   border: none;
   outline: none;
-  padding: 20px 25px;
+  padding: 20px 24px;
   margin-bottom: 50px;
   border-radius: 8px;
 }
@@ -180,10 +180,10 @@ main {
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
   margin-bottom: 20px;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-.feature:hover{
-    transform: scale(1.1);
+.feature:hover {
+  transform: scale(1.1);
 }
 .feature_title {
   font-style: normal;
@@ -193,7 +193,7 @@ main {
   color: #131313;
   margin-top: 10px;
 }
-.feature_desc{
+.feature_desc {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -218,10 +218,10 @@ main {
   position: absolute;
   bottom: -50px;
   left: -50px;
-  transition: all .4s ease-in;
+  transition: all 0.4s ease-in;
 }
-.experienc_card:hover >.exp_button{
- background-color: red;
+.experienc_card:hover > .exp_button {
+  background-color: red;
 }
 .card_exp {
   font-weight: 700;
@@ -231,6 +231,9 @@ main {
   color: #ffffff;
 }
 /* some fact */
+.fact{
+    margin-bottom: 140px;
+}
 .fact_content {
   width: 40%;
 }
@@ -253,11 +256,10 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  animation: fly 2s ease-in-out;
 }
 .card {
-  padding: 45px 35px;
-  display: flex;
+  padding:45px 35px;
+  display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -265,28 +267,20 @@ main {
   border-radius: 8px;
   width: 241.83px;
   height: 241.83px;
-  position: relative;
+  position:relative;
 }
-@keyframes fly{
- 0%{
-    transform: translateX(-100%);
- }100%{
-    transform: translateX(0px);
-
- }
+.card::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: #424242;
+  opacity: 0.3;
+  transition: all 0.4s ease;
 }
-.card::after{
-    content: '';
-    width:0%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    background: #424242;
-    opacity: 0.3;
-    transition: all .4s ease;
-}
-.card:hover::after{
-    width: 100%;
+.card:hover::after {
+  width: 100%;
 }
 .card img {
   width: 45px;
@@ -299,27 +293,11 @@ main {
   color: #424242;
 }
 
-
 /* form */
 .contactHeading {
-    text-align: center;
-    padding: 20px 0px;
+  text-align: center;
+  padding: 20px 0px;
 }
-#contactId >input{
-    border: 1px solid #ff900e;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 20px 0px;
-
-}
-
-.contactForm {
-    margin-bottom: 20px;
-    margin: auto;
-    padding: 50px 50px;
-
-}
-
 #contactId {
     display: flex;
     justify-content: center;
@@ -329,115 +307,146 @@ main {
     border-color: #ff900e;
     margin-bottom: 120px;
     border-radius: 20px;
-}
-.sponsor_title{
-font-style: normal;
-font-weight: 700;
-font-size: 45px;
-line-height: 53px;
-color: #131313;
-text-align: center;
+  }
+#contactId > input {
+  border: 1px solid #ff900e;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 0px;
 }
 
-.sponsor_desc{
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 26px;
-text-align: center;
-color: #727272;
-width: 50%;
-margin: 0 auto;
-padding: 0px 80px;
+form > label,
+input {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 53px;
+  color: #424242;
+}
 
+.contactForm {
+  margin-bottom:20px;
+  margin: 0 auto;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
 }
-.sponsor_card{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 141px;
-    position: relative;
+
+
+
+
+
+/* form end */
+
+.sponsor_title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  color: #131313;
+  text-align: center;
+  margin-bottom: 24px;
 }
-.sponsor_card> img{
-    position:relative;
-    filter: grayscale(100%);   /* according to JM bhai*/
+
+.sponsor_desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #727272;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0px 80px;
+}
+.sponsor_card {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 141px;
+  position: relative;
+}
+.sponsor_card > img {
+  position: relative;
+  filter: grayscale(100%); /* according to JM bhai*/
 }
 
 /* footer */
-footer{
-    background-color: #cec7be;
+footer {
+  background-color: #cec7be;
 }
-.footer_desc{
-    text-align: center;
-    padding: 38px 0px;
-    margin-bottom: 50px;
+.footer_desc {
+  text-align: center;
+  padding: 38px 0px;
+  margin-bottom: 50px;
 }
 
 /* Media query */
 
-@media screen and (max-width:576px) {
-    img{
-        max-width: 100%;
-    }
-    .logo{
-        margin-bottom: 20px;
-    }
-    .container{
-        width: 90%;
-        margin: 0 auto;
-    }
-    nav{
-        flex-direction: column;
-    }
-    .banner_content{
-        justify-content: center;
-        margin: 0;
-    }
-    .desc{
-        padding: 0px!important;
-    }
-    .title{
-        padding: 0;
+@media screen and (max-width: 576px) {
+  img {
+    max-width: 100%;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .banner_content {
+    justify-content: center;
+    margin: 0;
+  }
+  .desc {
+    padding: 0px !important;
+  }
+  .title {
+    padding: 0;
+  }
+  .Quick_list {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .features_title {
+    padding: 20px;
+  }
+  .exp_button {
+    left: 100px;
+    bottom: -100px;
+  }
+  .fact_content {
+    width: 100%;
+  }
+  .fact_cards {
+    gap: 8px;
+  }
+  .sponsor_card > img {
+    width: 80px;
+  }
+  .sponsor_desc {
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+  footer {
+    border-radius: 10px;
+  }
 
-    }
-    .Quick_list{
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    .features{
-        flex-direction: column;
-    }
-    .features_title{
-        padding: 20px;
-    }
-    .exp_button{
-        left: 100px;
-        bottom: -100px;
-    }
-    .fact_content{
-        width: 100%;
-    }
-    .fact_cards{
-        gap: 8px;
-    }
-    .sponsor_card > img{
-        width: 80px;
-    }
-    .sponsor_desc{
-        padding: 0;
-        margin-top: 30px;
-        width: 100%;
-    }
-    footer{
-        border-radius: 10px;
-    }
-
-    .footer_desc{
-        padding: 20px 20px;
-    }
+  .footer_desc {
+    padding: 20px 20px;
+  }
 }
-@media screen and (max-width:486px){
-    .card{
-        width: 100%;
-    }
+@media screen and (max-width: 486px) {
+  .card {
+    width: 100%;
+  }
 }
