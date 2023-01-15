@@ -40,7 +40,6 @@ ul {
   color: #727272;
   margin-bottom: 33px;
 }
-
 .primary_button {
   font-weight: 600;
   font-size: 20px;
@@ -181,6 +180,10 @@ main {
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
   margin-bottom: 20px;
+  transition: transform .2s ease-in-out;
+}
+.feature:hover{
+    transform: scale(1.1);
 }
 .feature_title {
   font-style: normal;
@@ -190,7 +193,7 @@ main {
   color: #131313;
   margin-top: 10px;
 }
-.feature_desc {
+.feature_desc{
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -215,6 +218,10 @@ main {
   position: absolute;
   bottom: -50px;
   left: -50px;
+  transition: all .4s ease-in;
+}
+.experienc_card:hover >.exp_button{
+ background-color: red;
 }
 .card_exp {
   font-weight: 700;
@@ -223,7 +230,6 @@ main {
   text-align: center;
   color: #ffffff;
 }
-
 /* some fact */
 .fact_content {
   width: 40%;
@@ -247,6 +253,7 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  animation: fly 2s ease-in-out;
 }
 .card {
   padding: 45px 35px;
@@ -258,6 +265,28 @@ main {
   border-radius: 8px;
   width: 241.83px;
   height: 241.83px;
+  position: relative;
+}
+@keyframes fly{
+ 0%{
+    transform: translateX(-100%);
+ }100%{
+    transform: translateX(0px);
+
+ }
+}
+.card::after{
+    content: '';
+    width:0%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: #424242;
+    opacity: 0.3;
+    transition: all .4s ease;
+}
+.card:hover::after{
+    width: 100%;
 }
 .card img {
   width: 45px;
@@ -327,6 +356,11 @@ padding: 0px 80px;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 141px;
+    position: relative;
+}
+.sponsor_card> img{
+    position:relative;
+    filter: grayscale(100%);   /* according to JM bhai*/
 }
 
 /* footer */
